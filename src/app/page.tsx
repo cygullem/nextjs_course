@@ -1,5 +1,5 @@
 import Image from "next/image";
-import {Greet, Hello}  from "./components/greet";
+import {Greet, Hello, NewYear}  from "./components/greet";
 import { Counter } from "./components/counter";
 
 export default function Home() {
@@ -19,6 +19,8 @@ export default function Home() {
 				<Greet />
 
 				<Counter />
+
+				<NewYear />
 
 				<ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
 					<li className="mb-2">

@@ -13,3 +13,11 @@ export const Hello = () => {
         <h1>Hello component</h1>
     );
 };
+
+export const NewYear = () => {
+    console.log("cheers to the new year!🥂🍾");
+
+    return (
+        <h1>Happy New Year!</h1>
+    );
+}
