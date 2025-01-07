@@ -21,6 +21,9 @@ export const Navigation = () => {
             >
                 Product 1
             </Link>
+            <Link href="/users-client" className={pathname === "/users-client" ? "font-bolf mr-4" : "text-blue-500 mr-4"}>
+                Clients
+            </Link>
         </nav>
     )
 }
