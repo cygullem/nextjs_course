@@ -48,12 +48,13 @@ export default function UsersClient() {
             {users.map((user) => (
                 <li
                     key={user.id}
-                    className="p-4 bg-white shadow-md rounded-lg text-gray-700"
+                    className="flex items-center justify-between p-4 bg-white shadow-md rounded-lg text-gray-700"
                 >
-                    {user.name} ({user.email}) ({user.website}) ({user.phone})
-
-                    <button onClick={() => router.push("/")} className="bg-blue-500 text-white p-[2px] rounded-md float-right">
-                        Details
+                    {user.name} ({user.email}) ({user.phone}) ({user.website})
+                    <button 
+                        onClick={() => router.push("/")} 
+                        className="bg-blue-500 text-white p-2 rounded-md">
+                            Details
                     </button>
                 </li>
             ))}
