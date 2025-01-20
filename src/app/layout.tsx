@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Navigation } from "./components/navigation";
+import { ClerkProvider } from "@clerk/nextjs";
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -24,20 +25,22 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en">
-			<body
-				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-			>
-				<header className="bg-slate-900 text-white p-4 text-center">
-					<Navigation />
-				</header>
+		<ClerkProvider>
+			<html lang="en">
+				<body
+					className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+				>
+					<header className="bg-slate-900 text-white p-4 text-center">
+						<Navigation />
+					</header>
 
-				{children}
+					{children}
 
-				<footer className="bg-slate-900 text-white p-4 text-center">
-					This site is created by hckrcy, Have fun browsing!
-				</footer>
-			</body>
-		</html>
+					<footer className="bg-slate-900 text-white p-4 text-center">
+						This site is created by hckrcy, Have fun browsing!
+					</footer>
+				</body>
+			</html>
+		</ClerkProvider>
 	);
 }
